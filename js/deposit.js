@@ -5,7 +5,14 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const depositField = document.getElementById('deposit-field');
     const newDepositAmountString = depositField.value;
     const newDepositAmount = parseFloat(newDepositAmountString)
-    console.log(newDepositAmount)
+
+    // last step:
+    depositField.value ='';
+    
+    if(isNaN(newDepositAmount)){
+        alert('Input Valid Deposit Amount')
+        return
+    }
     
     // step 3: get the value of deposit elements 
     const depositAmoutElement = document.getElementById('privious-deposit-amount');
@@ -30,8 +37,7 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
 
 
 
-    // last step:
-    depositField.value ='';
+    
 
 
 })
